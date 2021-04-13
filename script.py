@@ -13,4 +13,4 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import Normalizer
 from sklearn.metrics import r2_score
 
-ghjkh
+df = pd.read_csv('admissions_data.csv')
