@@ -14,3 +14,11 @@ from sklearn.preprocessing import Normalizer
 from sklearn.metrics import r2_score
 
 df = pd.read_csv('admissions_data.csv')
+df.drop(["Serial No."],axis = 1,inplace = True)
+features = df.iloc[:,:-2]
+labels = df.iloc[:,-1]
+labels = labels.to_frame()
+print(features.columns)
+print(labels.columns)
+skalowanie = StandardScaler()
+df_scaled = skalowanie.fit_transform(df)
